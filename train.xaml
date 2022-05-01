@@ -1,0 +1,61 @@
+﻿<Window x:Class="blindTyping.train"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:blindTyping"
+        mc:Ignorable="d"
+        Title="train" MinHeight="450" MinWidth="800" WindowState="Maximized" KeyDown="strText_KeyDown">
+    <Grid Background="#38b893">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Menu" Grid.Column="1" Background="#75ebc9" Height="50" FontFamily="Comic Sans MS" FontSize="34"
+                    Foreground="#d6a861" Margin="10,0" Click="Menu_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            Назад
+        </Button>
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Background="#d3f7ed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="127*"/>
+                <ColumnDefinition Width="387*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="126*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="strText" Grid.Column="1" Grid.Row="1" Height="60" Background="#75ebc9" FontFamily="Comic Sans MS" FontSize="34"
+                    Foreground="#d6a861" Grid.ColumnSpan="2" Margin="0,13,0,14">
+                <TextBlock.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="25"/>
+                    </Style>
+                </TextBlock.Resources>
+            </TextBlock>
+            <Button x:Name="startBut" Grid.Column="3" Grid.Row="1" Background="#75ebc9" Height="60" FontFamily="Comic Sans MS" FontSize="28"
+                    Foreground="#d6a861" Margin="15,13,15,14" Click="Start_Click">
+                Начать
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Image Source="images\клавиатура.png" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"></Image>
+        </Grid>
+    </Grid>
+</Window>
